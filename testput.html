@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Post test</title>
+    <!-- Bootstrap -->
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap.no-icons.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="hero-unit">
+        <form>
+            <fieldset>
+                <legend>Post test</legend>
+                <label>
+                    <input id="url" class="input-xxlarge" type="text" placeholder="Url">
+                </label>
+                <label>
+                    <textarea id="data" class="input-xxlarge" rows="5" placeholder="JSON"></textarea>
+                </label>
+                <select id="type">
+                    <option>POST</option>
+                    <option>PUT</option>
+                    <option>DELETE</option>
+                </select>
+                <button id="go" type="submit" class="btn btn-primary btn-large">Go</button>
+            </fieldset>
+        </form>
+    </div>
+</div>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script language="JavaScript">
+    $(document).ready(function() {
+        $('#go').click(function(e) {
+            e.preventDefault();
+            var url = $('#url').val(),
+                data = $('#data').val();
+            $.ajax({
+                url: url,
+                datatype: 'json',
+                contentType: "application/json; charset=utf-8",
+                type: $('select#type').val(),
+                data: data
+            });
+        });
+    });
+</script>
+</body>
+</html>
