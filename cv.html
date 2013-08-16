@@ -6,7 +6,7 @@
     <title>Rulikkk public</title>
 </head>
 <body>
-<nav class="navbar navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-fixed-bottom navbar-inverse" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -29,19 +29,29 @@
 </nav>
 <div class="container">
     <div class="row">
-        <div class="col-md-3">Menu</div>
-        <div class="col-md-9">
+        <div class="col-md-2">
+            <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="0">
+                <li><a href="#objective">Objective</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#my-key-skills">My key skills</a></li>
+                <li><a href="#current">Current</a></li>
+                <li><a href="#detailed">Detailed</a></li>
+                <li><a href="#additionals">Additionals</a></li>
+                <li><a href="#education">Education</a></li>
+            </ul>
+        </div>
+        <div class="col-md-10">
             <div class="row">
                 <div class="col-md-6">
-                    <h1>Objective</h1>
+                    <h1 id="objective">Objective</h1>
                     <p>Come and get things done good. Find and show better ways of working.</p>
-                    <h1>Experience</h1>
+                    <h1 id="experience">Experience</h1>
                     <p>
                         Started as a developer in 2005. Currently, working as a team-lead in <a href="http://ktlabs.ru/en">KT Labs</a>.
                     </p>
                 </div>
-                <h1>My key skills</h1>
                 <div class="col-md-6">
+                    <h1 id="my-key-skills">My key skills</h1>
                     <table class="table">
                         <tr>
                             <th>Management</th>
@@ -65,10 +75,11 @@
                     </table>
                 </div>
             </div>
-            <h2>Current</h2>
+            <h1 id="current">Current<small> work I do</small></h1>
             <p>
-                Finishing up a broad project, including almost all technologies mentioned below, plus iOs/android mobile apps.
-                Interaction with customer about technical details of project, help in preparation of documentation for project.
+                Finishing up a broad project, including almost all technologies mentioned below, plus iOs/android mobile
+                apps (android app was developed by me). Interaction with customer about technical details of project,
+                help in preparation of documentation for project.
             </p>
             <dl class="dl-horizontal">
                 <dt>Methodolgy</dt>
@@ -86,14 +97,14 @@
                 <dt>CI</dt>
                 <dd>Teamcity and jenkins (moving to teamcity)</dd>
             </dl>
-            <h2>Detailed<small> list of places I worked at, with a small description</small></h2>
+            <h1 id="detailed">Detailed<small> list of places I worked at, with a small description</small></h1>
             <h2><a href="http://ktlabs.ru/en">KT Labs</a><small> 2012 — now, team-lead </small></h2>
             <p>
                 Working as a team-lead, as described above.
             </p>
             <p>
                 Also, I was developing server and client sides for several projects using c# (iis) or node.js with postgres or
-                mongo, ext.js or backbone with other libs for client side. Took part in online collaboration tool, buisness
+                mongo, ext.js or backbone with other libs for client side. Took part in online collaboration tool, business
                 intelligence development. Taking part in company technology decisions, including starting to use automated
                 deploy, continuous integration.
             </p>
@@ -132,6 +143,41 @@
             </p>
             <p>
                 <strong>New key skills:</strong> writing production code, working in a team, win api, vcl.
+            </p>
+            <h1 id="additionals">Additionals<small>, list of small, but important things</small></h1>
+            <p>
+                In 2013, took part as a server-side developer (made a proxy web-controller from one API to another) in
+                a <strong>Scala-Play</strong> (Java based) framework. Got a little experience in this language.
+            </p>
+            <p>
+                In 2013, made a js libraries research for our company, including knockout, breeze, durandal, angular,
+                SPA templates for .net and many other, to adopt some instead backbone.
+            </p>
+            <p>
+                In 2012, helped a little in a <strong>ruby on rails</strong> project. Than, tested ruby as a programming
+                language on private projects. Now I also have some experience in this language and framework.
+            </p>
+            <p>
+                Since around 2010 trying to catch up with <strong>F#</strong> features and other functional-style
+                programming techniques. Tried using <strong>python</strong> as a language to solve some ACM programming
+                challenges.
+            </p>
+            <p>
+                Since 2002, while still studying, took part in many ACM-like local challenges, and got to know much
+                about extreme programming, standard algorithms and data-structures, O-notation.
+            </p>
+            <h1 id="education">Education</h1>
+            <h2><a href="http://kpfu.ru/?p_sub=16">Kazan State University</a><small> 2004 — 2009</small></h2>
+            <p>
+                Studied at Computing Maths and Cybernetics department, successfully received higher education and
+                graduated as a specialist in 2009. Before and in the university took part in several local programming
+                challenges (ACM-like rules), showed good results in 2004, and was invited to university without
+                examination.
+            </p>
+            <h2>Schools<small> 1994 — 2004</small></h2>
+            <p>
+                Learned in two local schools, from one I knew english very well, from antother — started learning
+                programming.
             </p>
         </div>
     </div>

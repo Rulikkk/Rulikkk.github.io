@@ -1,1 +1,17 @@
-body { padding-top: 70px; }
+body { padding-bottom: 70px; }
+
+
+/* Tablets and up */
+@media screen and (min-width: 768px) {
+    .affix {
+        position: static;
+    }
+}
+
+/* Tablets/desktops and up */
+@media screen and (min-width: 992px) {
+    .affix {
+        position: fixed;
+        margin-top: 20px;
+    }
+}
