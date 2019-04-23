@@ -1,5 +1,6 @@
 const config = require("./data/SiteConfig");
 const urljoin = require("url-join");
+const sass = require("sass");
 
 module.exports = {
   pathPrefix: config.pathPrefix,
@@ -21,7 +22,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sass`,
       options: {
-        implementation: require("sass")
+        implementation: sass
       }
     },
     {
