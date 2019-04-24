@@ -24,4 +24,6 @@ Since I like listening to music, sometimes, I find radios or streams of music, t
 
 [Zavtratunes](https://zavtracast.ru/tunes) — sets of cool electronic music. This one also does not name itself "music for programming", but I think it fits.
 
+[Brain.fm](https://brain.fm) — Paid music service: "We use our patented AI music engine and scientific research to create music to help you improve the activities you already do in 15 minutes or less."
+
 _List in progress: I am adding items from time to time._
