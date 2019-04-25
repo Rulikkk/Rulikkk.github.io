@@ -47,4 +47,12 @@ $ ssh gate -nNT -L localhost:9999:smb-host:445
 
 This command means: set up a tunnel using gate between `localhost:9999` and `smb-host:445`, assuming that `smb-host` is known and connected to `gate` (it is not required for your computer to even know/connect to `smb-host`).
 
+# By the way
+
+Same thing can be used for mac's screen sharing, that uses port 5900. The following command allows to remote-control `mac` (you need to enable it at first) in `gate`'s local network, using `localhost:8001` to connect to it:
+
+```bash
+$ ssh gate -nNT -L localhost:8001:mac:5900
+```
+
 Hope that helps! All those commands worked for me.
