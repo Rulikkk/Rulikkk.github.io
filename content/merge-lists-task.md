@@ -161,6 +161,7 @@ function mergeListsNaive(...lists) {
 
 -   The time complexity, if all lists are of same size, is `O(L * N^2)`. This is since we merge two lists of length `L`, then list of length `2 * L` and `L`, etc. Eventually, first list is merged `N - 1` times. This means the complexity is `(N - 1) * L + (N - 2) * L + ... + L ~ L * (N - 1) * (N - 2) / 2 ~ L * N^2`. **This is not linear anymore**.
 -   Space complexity is O(1), unless intermediate lists are counted towards memory usage, which is not correct in my opinion, since they are essentially the answer.
+-   Note: the time complexity of this approach highly **depends on the lists' lengths.** If they are quite different, the order of lists will affect performance.
 
 > You can still impress the interviewer, by showing this type of solution, but it may get hard to explain its time complexity.
 
@@ -209,6 +210,7 @@ function mergeListsOption1(...lists) {
 ```
 
 -   The time complexity is again `O(L * N^2)` since we do `L * N` steps and select minimum using `N` steps each time.
+-   Time complexity does not strongly depend on list sizes: it gets slightly better if some lists are short and exhaust fast.
 -   Space complexity is still `O(1)`
 
 Notes on implementation of `mergeListsOption1`: `getMinIndex` and `lists.filter`
@@ -220,10 +222,18 @@ Even in this implementation, the complexity is `L * N^2`...
 
 _Theory_: for N sorted lists, it is impossible to merge them in linear time.
 
-_Thoughts on proof_: To merge the lists in linear time, we need to be able to select
+_Thoughts on proof_: 
+
+1. To merge the lists in linear time, we need to be able to select
 the list, that has the next min-value in O(1). This would be possible, if the
 values are already pre-sorted, and we would just pick the [0] value from some structure.
 But we also need to support this structure to be sorted. This will also take some time.
+
+2. Since the size of answer is `sum(len(lists))` which is equal to `N * L` for N lists of size L,
+it is obvious, that this answer itself cannot be built faster than linear time of `O(N *  L)`. This means, that
+there's only `O(1)` time remaining for picking the "next best element"—which seems impossible. This means,
+that there's no algorithm, based on picking "next best element", that works in linear time. Most likely, this also
+means that there cannot such an algorithm at all.
 
 Based on ideas above, it looks like:
 
@@ -332,10 +342,11 @@ function mergeListsFast2(...lists) {
 
 -   Time complexity is `O(L * N * log(N))`, since on each stage we merge a total of `L * N` items in lists. We do `log(N)` steps of this (height of B-tree).
 -   Space complexity is `O(1)`, unless we count intermediate answers as space, which I don't think we should do.
+-   If the lengths of lists are not even, the order of lists affects performance and may degrade it dramatically.
 
 # Conclusion
 
-Now we know multiple approaches to solving this generic task, ones that are optimal, and which are not. I think the best and simplest approach is to implement merge for two lists, and then construct tree-based merge from it (which is `mergeListsFast2` here).
+Now we know multiple approaches to solving this generic task, ones that are optimal, and which are not. I think the best and simplest approach is to implement merge for two lists, and then construct tree-based merge from it (which is `mergeListsFast2` here). However, if you care about case for non-even lists' lengths—think about the heap-based approach, which seems to be a more stable bet in "general case".
 
 Notes:
 
