@@ -19,6 +19,6 @@ Here is a collection of "website checklists", related to multiple areas of inter
 
 - [Front-End Design Checklist](https://github.com/thedaviddias/Front-End-Design-Checklist) — 💎 The Design Checklist for Creative Web Designers and Patient Front-End Developers
 
-- [UX Project Checklist](uxchecklist.github.io) — Article from author: [Why I made it and what’s next](https://medium.com/uxchecklist/ux-project-checklist-why-i-made-it-and-whats-next-6df312b0b92e)
+- [UX Project Checklist](https://uxchecklist.github.io/) — Article from author: [Why I made it and what’s next](https://medium.com/uxchecklist/ux-project-checklist-why-i-made-it-and-whats-next-6df312b0b92e)
 
 - [Front-End Checklist Application](https://frontendchecklist.io) — The Front-End Checklist Application is perfect for modern websites and meticulous developers! 
