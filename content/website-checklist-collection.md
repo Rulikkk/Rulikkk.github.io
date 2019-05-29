@@ -22,3 +22,5 @@ Here is a collection of "website checklists", related to multiple areas of inter
 - [UX Project Checklist](https://uxchecklist.github.io/) — Article from author: [Why I made it and what’s next](https://medium.com/uxchecklist/ux-project-checklist-why-i-made-it-and-whats-next-6df312b0b92e)
 
 - [Front-End Checklist Application](https://frontendchecklist.io) — The Front-End Checklist Application is perfect for modern websites and meticulous developers! 
+
+- [Neil Patel SEO Tool](https://neilpatel.com/) — The SEO analysis tool.
