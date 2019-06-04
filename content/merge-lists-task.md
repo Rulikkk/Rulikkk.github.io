@@ -222,7 +222,20 @@ Even in this implementation, the complexity is `L * N^2`...
 
 _Theory_: for N sorted lists, it is impossible to merge them in linear time.
 
-_Thoughts on proof_: 
+_Real proof_ (suggested [here](https://mobile.twitter.com/dmitry_vk/status/1133840135924137985) by [@dmitry_vk](https://mobile.twitter.com/dmitry_vk)):
+
+If we have a linear way to merge N lists (based on comparison),<br>
+-> Then we have a way to merge N lists of size 1 in linear time,<br>
+--> Means we have a way to sort N number in linear time (based on comparison)<br>
+---> Which is impossible (see [here](https://cs.stackexchange.com/questions/32311/proving-the-lower-bound-of-compares-in-comparison-based-sorting) for example)
+
+_Thoughts on real proof:_
+
+- The real proof is heavily based on the fact, that we should merge lists in a "comparison-based" approach, means comparing pairs of numbers. **If we find a way to sort them, which is not "comparison-based", we may find a linear solution to the task**. Is is possible to start the search from looking at any of "linear-time sorting" algorithms, like radix, bucket or counting sorts. If we assume it's possible to use any of that sort, we can just put all our elements to a single array, sort it in linear time and then create a result-list from that array, making a full linear-time solution.
+
+- Based on above, it might be feasible, even for comparison-based sorts, to still put all data to an array and then try sorting it, since we know indexes of each sorted part... Or maybe not.
+
+_Thoughts on proof (before real proof was suggested)_: 
 
 1. To merge the lists in linear time, we need to be able to select
 the list, that has the next min-value in O(1). This would be possible, if the
