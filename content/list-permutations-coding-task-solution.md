@@ -11,6 +11,10 @@ tags:
 
 Task: given a string (e.g. “abc”), print out all possible permutation of its characters. There are two major variations of this task: one that goes without repetition (assume all characters are unique) or with repetition (assume some characters may repeat). In “with repetition” case, the “abb” string only has three options “abb, bab, bba”, which is important to understand.
 
+TODO:
+- add iterative solution (heap-swap idea)
+- add another iterative solution (generate next permutation idea)
+
 Implementation below has options for both cases and using multiple approaches:
 
 ```csharp
