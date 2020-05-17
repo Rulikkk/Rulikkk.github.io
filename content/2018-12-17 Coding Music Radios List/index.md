@@ -28,6 +28,8 @@ Since I like listening to music, sometimes, I find radios or streams of music, t
 
 [Listen to the Cloud](http://listentothe.cloud) — Ambient music mixed with flight radio.
 
-[Poolside FM](https://poolside.fm) —  Poolside FM was conceived one awfully rainy summer in the Highlands of Scotland - a virtual vacation, if you will. The audio and video streams are curated to inject a healthy dose of serotonin into your brain. 
+[Poolside FM](https://poolside.fm) — Poolside FM was conceived one awfully rainy summer in the Highlands of Scotland - a virtual vacation, if you will. The audio and video streams are curated to inject a healthy dose of serotonin into your brain.
+
+[Endel](https://play.endel.io) — Endel is a technology that creates personalized soundscapes to reduce stress, increase focus, and improve sleep. It is supported by neuroscience. Completely aligned with the circadian rhythm, the sounds are generated in real-time basing on various inputs such as your location, time zone, weather, and heart rate.
 
 _List in progress: I am adding items from time to time._
