@@ -131,9 +131,9 @@ disadvantage:
 # Conclusion
 
 After a short warm-up with Svelte, I found it very convenient and quite easy to
-get up and running with it. [Codesandbox.io] supports it quite well, so there is
-no need to set up everything locally. However, if you prefer using local VSCode,
-I would suggest going on with
+get up and running with it. [Codesandbox.io](https://csb.app) supports it quite
+well, so there is no need to set up everything locally. However, if you prefer
+using local VSCode, I would suggest going on with
 [VSCode Remote Development plugin](https://github.com/Microsoft/vscode-remote-release),
 so that you don's intall node and all modules locally. This plugin even lets
 setting up some VSCode extensions, like Prettier, remotely.
