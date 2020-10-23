@@ -1,5 +1,5 @@
 ---
-title: "Building “Digit Learner” — Part 1: Svelte"
+title: "Building “Digit Tutor” — Part 1: Svelte"
 cover: "https://source.unsplash.com/MRlFZs_WZdI/1080x600"
 date: "2020-10-19"
 
@@ -14,17 +14,17 @@ tags:
   - kids
   - speech-recognition
   - i18n
-  - digit-learner
+  - digit-tutor
 ---
 
-"Digit Learner" — a simple online game for kids in Svelte, which uses speech
+"Digit Tutor" — a simple online game for kids in Svelte, which uses speech
 recognition engine to train pronounciation of digits: from "0" to "9".
 
-> This post is part of a series about building "Digit Learner", that include:
+> This post is part of a series about building "Digit Tutor", that include:
 >
-> 1. Building “Digit Learner” — Part 1: Svelte
-> 2. Building “Digit Learner” — Part 2: Speech Recognition
-> 3. Building “Digit Learner” — Part 3: Internationalization
+> 1. Building “Digit Tutor” — Part 1: Svelte
+> 2. Building “Digit Tutor” — Part 2: Speech Recognition
+> 3. Building “Digit Tutor” — Part 3: Internationalization
 
 # Idea
 
