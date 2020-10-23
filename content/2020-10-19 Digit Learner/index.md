@@ -142,8 +142,8 @@ As for the Svelte features, everything seemed convenient and well-thought. I had
 couple issues with Svelte not seeing array updates (see item#2 above) and being
 unable to style a Svelte component from root-component (the fix is to wrap
 component to a `div` or make sure it captures additional style from props).
-Otherwise, tutorial at svelte.dev was quite comprehensive and covered everything
-required.
+Otherwise, [tutorial at svelte.dev](https://svelte.dev/tutorial) was quite
+comprehensive and covered everything required.
 
 Would I recommend using Svelte in production? Yes, if you're working with a
 web-site (not web-app), which is not very dynamic and delivers, mostly, static
