@@ -129,3 +129,25 @@ disadvantage:
    shared state between different components, yet, as I have seen in React.
 
 # Conclusion
+
+After a short warm-up with Svelte, I found it very convenient and quite easy to
+get up and running with it. [Codesandbox.io] supports it quite well, so there is
+no need to set up everything locally. However, if you prefer using local VSCode,
+I would suggest going on with
+[VSCode Remote Development plugin](https://github.com/Microsoft/vscode-remote-release),
+so that you don's intall node and all modules locally. This plugin even lets
+setting up some VSCode extensions, like Prettier, remotely.
+
+As for the Svelte features, everything seemed convenient and well-thought. I had
+couple issues with Svelte not seeing array updates (see item#2 above) and being
+unable to style a Svelte component from root-component (the fix is to wrap
+component to a `div` or make sure it captures additional style from props).
+Otherwise, tutorial at svelte.dev was quite comprehensive and covered everything
+required.
+
+Would I recommend using Svelte in production? Yes, if you're working with a
+web-site (not web-app), which is not very dynamic and delivers, mostly, static
+content. Although there are good react-based static site generators, Svelte will
+always win in initial bundle size, while being equal in performance. It is also
+quite mature now, as current major version is 3, meaning three major releases
+are done now.
