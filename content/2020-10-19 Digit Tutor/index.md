@@ -20,13 +20,17 @@ tags:
 "Digit Tutor" — a simple online game for kids in Svelte, which uses speech
 recognition engine to train pronounciation of digits: from "0" to "9".
 
-### ✳️ [Open Digit Tutor](https://digit-tutor.rmust.me)
+### ✳️ <a href="https://digit-tutor.rmust.me" target="_blank">Open Digit Tutor</a>
 
-> This post is part of a series about building "Digit Tutor", that include:
+The project is [open-source](https://github.com/Rulikkk/digit-learner), so, feel
+free to send a PR, if you wish!
+
+> This post is part of a series about building Digit Tutor, that include:
 >
-> 1. Building “Digit Tutor” — Part 1: Svelte
-> 2. Building “Digit Tutor” — Part 2: Speech Recognition
-> 3. Building “Digit Tutor” — Part 3: Internationalization
+> 1. [Building “Digit Tutor” — Part 1: Svelte](/building-digit-tutor-part-1-svelte)
+>    (this page)
+> 2. Building “Digit Tutor” — Part 2: Speech Recognition (TBD)
+> 3. Building “Digit Tutor” — Part 3: Internationalization (TBD)
 
 # Idea
 
