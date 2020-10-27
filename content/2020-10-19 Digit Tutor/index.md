@@ -22,7 +22,7 @@ recognition engine to train pronounciation of digits: from "0" to "9".
 
 ### ✳️ <a href="https://digit-tutor.rmust.me" target="_blank">Open Digit Tutor</a>
 
-The project is [open-source](https://github.com/Rulikkk/digit-learner), so, feel
+The project is [open-source](https://github.com/Rulikkk/digit-tutor), so, feel
 free to send a PR, if you wish!
 
 > This post is part of a series about building Digit Tutor, that include:
