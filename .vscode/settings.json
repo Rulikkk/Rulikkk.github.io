@@ -1,0 +1,6 @@
+{
+    "files.watcherExclude": {
+        "**/.cache/**": true
+    },
+    "prettier.proseWrap": "always"
+}
