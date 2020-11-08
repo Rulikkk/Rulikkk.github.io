@@ -12,8 +12,6 @@ tags:
 
 Since I like listening to music, sometimes, I find radios or streams of music, that claims it's "for development". I like listening to those, too, so I keep a collecion.
 
-> **PR Request**: In case someone wants to turn this page into a working radio, that allows switching between all of items below, feel free to send a PR.
-
 [FreeCodeCamp Radio](https://www.youtube.com/watch?v=vAKtNV8KcWg) — an endless Youtube stream of "jazzy beats" for coding.
 
 [CodingRadio](https://codingradio.xyz) — Playlists for coding, named like "Focus on Deadline", "Debugging Battles", etc.
@@ -31,5 +29,9 @@ Since I like listening to music, sometimes, I find radios or streams of music, t
 [Poolside FM](https://poolside.fm) — Poolside FM was conceived one awfully rainy summer in the Highlands of Scotland - a virtual vacation, if you will. The audio and video streams are curated to inject a healthy dose of serotonin into your brain.
 
 [Endel](https://play.endel.io) — Endel is a technology that creates personalized soundscapes to reduce stress, increase focus, and improve sleep. It is supported by neuroscience. Completely aligned with the circadian rhythm, the sounds are generated in real-time basing on various inputs such as your location, time zone, weather, and heart rate.
+
+[Coding / Hacking / Felling like a 80's sci-fi superhero](https://open.spotify.com/user/dewanderer/playlist/601WLbJ3Vj91XIugGUJNUe?si=nGWvm759SGCIVir6vY5Kug) — Spotify playlist with retro-wave / lo-fi sounds collection. If you like Kavinsky — Nightcall, you will like this, too!
+
+**PR Request**: Want to add your link or to turn this page into a working radio? [Feel free to send a PR](https://github.com/Rulikkk/Rulikkk.github.io/blob/master/content/2018-12-17%20Coding%20Music%20Radios%20List/index.md).
 
 _List in progress: I am adding items from time to time._
