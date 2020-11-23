@@ -139,16 +139,23 @@ Here we are initializing everything we need (even grammar):
    `window.SpeechRecognition || window.webkitSpeechRecognition`
 2. Create instances of the objects, using `new`
 
-Note, that for grammar initialization I am using a separate module
-called "locale", since grammar depends on current language. Later,
-I understood, that grammar isn't actually used.
+Note, that for grammar initialization I am using a separate module called
+"locale", since grammar depends on current language. Later, I understood, that
+grammar isn't actually used.
 
 Before jumping to configuration details, I'll describe how to use that
 `recognition` instance:
 
-1. Call `.start()` — this is the place, when browser asks for mic access
-2. Listen to `.onresult` events. Each event may be "final" or "interim"
-3. Call `.stop()`, if/when needed. My implementation does not call it ever =)
+1. Call `.start()` — this is the place, when browser asks for mic access and
+   actual listening to user's speech starts
+2. Listen to `.onresult` events. Each event may be "final" or "interim".
+   "Interim" result is something you get quite randomly and often, while the
+   user is still speaking. "Final" result is sent as soon as user has stopped
+   speaking and is silent for some cooldown period.
+3. Call `.stop()` or `.abort()`, if/when needed. My implementation calls "abort"
+   after a successfull digit guess, and calls start quickly after that. The
+   difference between them is, that "stop" attempts to return one last "final"
+   result, while "abort" does not.
 
 The configuration details:
 
@@ -164,10 +171,10 @@ The configuration details:
   using this, to improve recognition percieved performance: even if the interim
   result contains correct digit, it is considered pronounced correctly. This
   makes game much more responsive
-- `.maxAlternatives`: how many recognition options do you need. These are usually
-  similarly sounding words and their combinations. Using "1" in my code, as I
-  only need one option
-  
+- `.maxAlternatives`: how many recognition options do you need. These are
+  usually similarly sounding words and their combinations. Using "1" in my code,
+  as I only need one option
+
 ## Using the Speech Recognition
 
 Now, as we have properly initialized all required objects, we need to:
@@ -175,37 +182,36 @@ Now, as we have properly initialized all required objects, we need to:
 1. Start using speech recognition
 2. Integrate it to the game process
 
-The instance usage is simple: call `.start()` to start listening, and
-subscribe to `.onresult` event to handle results.
+The instance usage is simple: call `.start()` to start listening, and subscribe
+to `.onresult` event to handle results.
 
-There are also things like `.onerror` and `.onnomatch` events: I am
-using them just to show those errors to user, haven't seen them actually fire,
-yet.
+There are also things like `.onerror` and `.onnomatch` events: I am using them
+just to show those errors to user, haven't seen them actually fire, yet.
 
 Let's dive into `.onresult`
 [implementation](https://github.com/Rulikkk/digit-tutor/blob/main/App.svelte#L61);
 below is its annotated version:
 
-```js 
-recognition.onresult = function(event) {
+```js
+recognition.onresult = function (event) {
   console.log(event); // who doesn't like a good console.log?
-  
-  // Extract "current" result from all existing 
+
+  // Extract "current" result from all existing
   // results; this event also stores older results,
   // till the "final" result is in.
   const result = event.results[event.resultIndex];
   const transcript = result[0].transcript.toLowerCase();
-  
-  // this is for Svelte, to show hint on screen: 
+
+  // this is for Svelte, to show hint on screen:
   // "what was heard by computer"
   hint = transcript;
-  
+
   // Some more logging
   console.log("Result received: " + transcript + ".");
   console.log("Confidence: " + result.confidence);
-  
+
   // Here we check, if expected digit was pronounced
-  // Sometimes Chrome recognizes them as words (e.g. six), 
+  // Sometimes Chrome recognizes them as words (e.g. six),
   // sometimes as digits (e.g. 6). Computers aren't clever
   // enough to handle those cases, so we need an IF with OR
   if (
@@ -216,7 +222,7 @@ recognition.onresult = function(event) {
     onCorrectDigit();
   } else {
     // I had specific handling for incorrect pronounciation
-    // But those event fire quite often, so I decieded to 
+    // But those event fire quite often, so I decieded to
     // not do anything in case answer is not correct.
     // onFail();
   }
@@ -226,35 +232,35 @@ recognition.onresult = function(event) {
 Can you spot a bug in the code above? If you need to say "six", and you say
 "twenty six", this will still count as correct. Not a big deal, I think.
 
-As you see, this code works with Svelte and UI, but it isn't impacted in
-almost any way by Svelte. The cool thing is in this line 
-`transcript.indexOf($l.numbers[digit]) >= 0`. `$l` here is a Svelte store,
-and it will always refer to the current locale, so it will look for correct
-words as digits.
+As you see, this code works with Svelte and UI, but it isn't impacted in almost
+any way by Svelte. The cool thing is in this line
+`transcript.indexOf($l.numbers[digit]) >= 0`. `$l` here is a Svelte store, and
+it will always refer to the current locale, so it will look for correct words as
+digits.
 
-The last piece of code related to recognition is in `onCorrectDigit` handler.
-It calls `.abort()` and `.start()` once again, to clear the results array
-and make sure the app memory footprint is consistently low. I think, it would
-work even without that restarting, but this feels correct.
+The last piece of code related to recognition is in `onCorrectDigit` handler. It
+calls `.abort()` and `.start()` once again, to clear the results array and make
+sure the app memory footprint is consistently low. I think, it would work even
+without that restarting, but this feels correct.
 
 # Conclusion
 
 That's all! We've covered 100% of lines, related to speech recognition in the
-app. As you see, there's nothing complex and hard work is abstracted away
-by the browser. The only piece not covered is handling missing SpeechAPI; this
-is fairly straightforward, so omitted here.
+app. As you see, there's nothing complex and hard work is abstracted away by the
+browser. The only piece not covered is handling missing SpeechAPI; this is
+fairly straightforward, so omitted here.
 
 If I was implementing it, probably, I would go with a simpler arguments for
-`.onresult` event, but it takes just 2 more minutes, to figure out its
-structure and, probably, covers more cases, than mine.
+`.onresult` event, but it takes just 2 more minutes, to figure out its structure
+and, probably, covers more cases, than mine.
 
 Also note once again, that this all is almost Chrome-only for now, so cannot
 consider it "production-ready".
 
-In the third Digit-Tutor article I will cover localization implementation: 
-Svelte has a built-in approach, however, I've opted for a custom, store-
-based implementation, since I had to integrate that with speech recognition, too.
-What I got, I called a "poor man's localization for Svelte" as it felt simpler and
+In the third Digit-Tutor article I will cover localization implementation:
+Svelte has a built-in approach, however, I've opted for a custom, store- based
+implementation, since I had to integrate that with speech recognition, too. What
+I got, I called a "poor man's localization for Svelte" as it felt simpler and
 more flexible than the built in one in the end.
 
-Thanks you!
+Thank you!
