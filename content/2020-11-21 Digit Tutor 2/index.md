@@ -67,9 +67,9 @@ As you might guess, speech recognition in browsers contains of three parts:
 - **Synthesis**: allows browser to talk to you
 - **Recognition**: allows browser to convert speech to text
 
-Logically, there might also be something like "intent recognition", which would
-help you understand, what did the user really mean, but it seems that current
-technology state does not allow to do that reliably.
+Logically, there might also be something like "intent recognition", to
+understand what the user really means, but it seems that current technology
+state does not allow to do that reliably.
 
 At first, and very logically, I thought I would need to support _Grammar_ and
 _Recognition_ in my game. Later, during the testing stages, I've figured out,
