@@ -38,8 +38,8 @@ If you're interested in details on how "Digit Tutor" started and was built in
 Svelte, please, refer to the
 [first article](/building-digit-tutor-part-1-svelte) in the series.
 
-This article covers the details of speech recognition — how it works and which
-browsers support it.
+This article covers the details of speech recognition — how it works, which
+browsers support it and how I have used it.
 
 # Can I use SpeechAPI?
 
