@@ -28,8 +28,8 @@ free to send a PR, if you wish!
 > This post is part of a series about building Digit Tutor, that include:
 >
 > 1. [Building “Digit Tutor” — Part 1: Svelte](/building-digit-tutor-part-1-svelte)
-> 2. [Building “Digit Tutor” — Part 2: Speech Recognition](/building-digit-tutor-part-2-speech-recognition)
 >    (this page)
+> 2. [Building “Digit Tutor” — Part 2: Speech Recognition](/building-digit-tutor-part-2-speech-recognition)
 > 3. Building “Digit Tutor” — Part 3: Internationalization (TBD)
 
 # Idea
