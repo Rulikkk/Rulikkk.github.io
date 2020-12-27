@@ -30,7 +30,7 @@ free to send a PR, if you wish!
 > 1. [Building “Digit Tutor” — Part 1: Svelte](/building-digit-tutor-part-1-svelte)
 > 2. [Building “Digit Tutor” — Part 2: Speech Recognition](/building-digit-tutor-part-2-speech-recognition)
 >    (this page)
-> 3. Building “Digit Tutor” — Part 3: Internationalization (TBD)
+> 3. [Building “Digit Tutor” — Part 3: Internationalization](/building-digit-tutor-part-3-internationalization)
 
 # Intro
 
